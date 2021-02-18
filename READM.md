@@ -26,3 +26,24 @@ git remote add origin git@github.com:GitHub名字/项目的名字.git
 
 把暂存区代码推送到远程仓库去
 git push -u origin master
+
+## 统一分支
+
+github上分支是main，而本地的默认分支是master，让我误以本地代码为没有推送到GitHub
+
+然后 git push -u origin main 结果报错，因为我没有本地分支main
+
+git checkout -b main
+
+使用 git checkout -b main 在git工具上创建main分支并进入
+
+git branch -D master 
+
+删除本地的master分支
+
+git push origin --delete master 
+
+删除GitHub项目的master分支
+
+git push -u origin main       统一使用main分支
+
